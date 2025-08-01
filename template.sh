@@ -10,6 +10,6 @@ touch src/helper.py
 touch .env
 touch setup.py
 touch app.py
-touch research/trails.ipynb
+touch research/trials.ipynb
 
 echo "Directories and files created successfully."
