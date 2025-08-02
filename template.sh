@@ -7,6 +7,7 @@ touch src/__init__.py
 touch src/prompt.py
 touch src/helper.py
 
+touch store_index.py
 touch .env
 touch setup.py
 touch app.py
