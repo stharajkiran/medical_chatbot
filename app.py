@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 from src.prompt import *
 import os
 
-
 load_dotenv()
 PINECONE_API_KEY=os.environ.get('PINECONE_API_KEY')
 OPENAI_API_KEY=os.environ.get('OPENAI_API_KEY')

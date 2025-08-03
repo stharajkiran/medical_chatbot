@@ -1,26 +1,26 @@
-FROM python:3.10-slim-buster
+# FROM python:3.13-slim-buster
+
+# WORKDIR /app
+
+# COPY . /app
+
+# RUN pip install -r requirements.txt
+
+# CMD ["python3", "app.py"]
+
+
+FROM python:3.13-slim-bookworm
+COPY --from=ghcr.io/astral-sh/uv:0.8.4 /uv /uvx /bin/
 
 WORKDIR /app
-
+# Copy the project into the image
 COPY . /app
 
-RUN pip install -r requirements.txt
+# Sync the project into a new environment, asserting the lockfile is up to date
 
-CMD ["python3", "app.py"]
+RUN uv sync --locked
 
-
-# FROM python:3.13-slim-bookworm
-
-# COPY --from=ghcr.io/astral-sh/uv:0.8.4 /uv /uvx /bin/
-
-# # Copy the project into the image
-# ADD . /app
-
-# # Sync the project into a new environment, asserting the lockfile is up to date
-# WORKDIR /app
-# RUN uv sync --locked
-
-# CMD ["uv", "run", "app.py"]
+CMD ["uv", "run", "app.py"]
 
 
 

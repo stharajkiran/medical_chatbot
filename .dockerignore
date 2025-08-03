@@ -1,0 +1,25 @@
+# .dockerignore
+
+# Exclude everything
+# **
+
+# Include only what's needed
+!app.py
+!src/
+!templates/
+!static/
+!pyproject.toml
+!uv.lock 
+
+# Optional: explicitly ignore some common large/dev files
+*.ipynb
+*.log
+.env
+.vscode/
+__pycache__/
+*.pyc
+tests/
+.git/
+data/
+models/
+.bash
