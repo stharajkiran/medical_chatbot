@@ -6,7 +6,7 @@ from langchain.embeddings import HuggingFaceEmbeddings
 
 
 # Extract text from PDF files
-def load_pdf_files(data):
+def load_pdf_file(data):
     loader = DirectoryLoader(
         data,
         glob="*.pdf",
